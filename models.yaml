@@ -1,0 +1,18 @@
+# Example models manifest for InfernoGuard PC Multi-Model Pipeline
+# Adheres to schema: models: [ {name, path, device, conf_threshold, iou_threshold, imgsz, half_precision, max_det, warmup_iterations, expected_classes, strict_classes} ]
+models:
+  - name: "primary_inferno"
+    path: "models/inferno.pt"
+    device: "auto"
+    conf_threshold: 0.25
+    iou_threshold: 0.45
+    imgsz: 640
+    half_precision: false
+    max_det: 300
+    warmup_iterations: 1
+    fallback_to_cpu: true
+    expected_classes:
+      0: "fire"
+      1: "smoke"
+      2: "spark"
+    strict_classes: false
